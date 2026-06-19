@@ -1,0 +1,676 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Travel Explorer</title>
+ <link rel="stylesheet" href="styl.css">
+</head>
+
+<body>
+
+
+    <!-- NAVBAR -->
+
+    <nav>
+
+        <div class="logo">
+
+            Travel Explorer
+
+        </div>
+
+
+        <ul>
+
+            <li><a href="#hero">Home</a></li>
+
+            <li><a href="#features">Features</a></li>
+
+            <li><a href="#places">Places</a></li>
+
+            <li><a href="#tools">Travel Tools</a></li>
+
+            <li><a href="#contact">Contact</a></li>
+
+        </ul>
+
+    </nav>
+
+
+
+
+    <!-- HERO -->
+
+    <section class="hero" id="hero">
+
+        <div class="overlay"></div>
+
+        <div class="hero-content">
+
+            <h1>
+
+                Discover The Beauty Of The World
+
+            </h1>
+
+
+            <p>
+
+                Explore breathtaking destinations with unforgettable adventures.
+
+            </p>
+
+
+            <button onclick="openModal()">
+
+                Explore Now
+
+            </button>
+
+        </div>
+
+    </section>
+
+
+
+
+
+
+    <!-- FEATURES -->
+
+
+    <section class="features-section" id="features">
+
+
+        <div class="section-title">
+
+            <h2>
+
+                Why Travel With Us?
+
+            </h2>
+
+            <p>
+
+                Experience unforgettable journeys with comfort and safety.
+
+            </p>
+
+        </div>
+
+
+
+        <div class="features-container">
+
+
+            <div class="feature-card">
+
+                <div class="icon">
+
+                    ✈️
+
+                </div>
+
+
+                <h3>
+
+                    Affordable Tours
+
+                </h3>
+
+
+                <p>
+
+                    Enjoy budget friendly trips and exciting offers.
+
+                </p>
+
+            </div>
+
+
+
+
+
+            <div class="feature-card">
+
+                <div class="icon">
+
+                    🛡️
+
+                </div>
+
+
+                <h3>
+
+                    Safe Journey
+
+                </h3>
+
+
+                <p>
+
+                    Trusted guides and secure travel plans.
+
+                </p>
+
+            </div>
+
+
+
+
+
+            <div class="feature-card">
+
+                <div class="icon">
+
+                    🌍
+
+                </div>
+
+
+                <h3>
+
+                    Global Destinations
+
+                </h3>
+
+
+                <p>
+
+                    Explore beaches, mountains and beautiful cities.
+
+                </p>
+
+            </div>
+
+
+
+
+
+
+            <div class="feature-card">
+
+                <div class="icon">
+
+                    💬
+
+                </div>
+
+
+                <h3>
+
+                    24/7 Support
+
+                </h3>
+
+
+                <p>
+
+                    We are always here to assist you.
+
+                </p>
+
+            </div>
+
+
+
+        </div>
+
+
+    </section>
+
+
+
+
+
+
+    <!-- GRID -->
+
+
+
+    <section id="places">
+
+
+        <h2 class="heading">
+
+            Popular Destinations
+
+        </h2>
+
+
+
+        <div class="grid-container">
+
+
+
+            <div class="grid-item">
+
+                <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e">
+
+                <h3>Maldives</h3>
+
+            </div>
+
+
+
+            <div class="grid-item">
+
+                <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee">
+
+                <h3>Switzerland</h3>
+
+            </div>
+
+
+
+
+            <div class="grid-item">
+
+                <img src="https://images.unsplash.com/photo-1469474968028-56623f02e42e">
+
+                <h3>Paris</h3>
+
+            </div>
+
+
+
+
+
+            <div class="grid-item">
+
+                <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb">
+
+                <h3>Bali</h3>
+
+            </div>
+
+
+        </div>
+
+
+    </section>
+
+
+
+
+
+
+    <!-- HTML APIs -->
+
+
+
+    <section class="tools-section" id="tools">
+
+    <div class="section-title">
+
+        <h2>Interactive Travel Tools</h2>
+
+        <p>
+
+            Experience HTML5 APIs with fun travel activities.
+
+        </p>
+
+    </div>
+
+
+    <div class="tools-container">
+
+
+        <!-- GEOLOCATION -->
+
+        <div class="tool-card">
+
+            <div class="tool-icon">
+
+                📍
+
+            </div>
+
+            <h3>Find My Location</h3>
+
+            <p>
+
+                Discover your current location instantly.
+
+            </p>
+
+            <button onclick="getLocation()">
+
+                Get Location
+
+            </button>
+
+            <p id="location"></p>
+
+        </div>
+
+
+
+
+        <!-- LOCAL STORAGE -->
+
+        <div class="tool-card">
+
+            <div class="tool-icon">
+
+                💾
+
+            </div>
+
+            <h3>Save Traveller Name</h3>
+
+            <p>
+
+                Store your name using Local Storage.
+
+            </p>
+
+
+            <input
+
+            type="text"
+
+            id="username"
+
+            placeholder="Enter Name">
+
+
+            <button onclick="saveName()">
+
+                Save
+
+            </button>
+
+        </div>
+
+
+
+
+
+        <!-- DRAG DROP -->
+
+        <div class="tool-card">
+
+            <div class="tool-icon">
+
+                🧳
+
+            </div>
+
+
+            <h3>
+
+                Pack Your Bag
+
+            </h3>
+
+
+            <p>
+
+                Drag your travel bag into the suitcase.
+
+            </p>
+
+
+
+            <div class="drag-container">
+
+
+
+                <img
+
+                id="drag1"
+
+                src="https://cdn-icons-png.flaticon.com/512/679/679720.png"
+
+                draggable="true"
+
+                ondragstart="drag(event)">
+
+
+
+                <div
+
+                id="drop"
+
+                ondrop="drop(event)"
+
+                ondragover="allowDrop(event)">
+
+
+
+                Drop Here
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+
+
+        <!-- SESSION STORAGE -->
+
+
+        <div class="tool-card">
+
+
+            <div class="tool-icon">
+
+                🌴
+
+            </div>
+
+
+            <h3>
+
+                Favourite Destination
+
+            </h3>
+
+
+            <p>
+
+                Save Bali as your current trip.
+
+            </p>
+
+
+            <button onclick="sessionStorage.setItem('trip','Bali')">
+
+                Save Trip
+
+            </button>
+
+
+        </div>
+
+
+
+
+    </div>
+
+
+</section>
+
+
+
+
+
+
+
+
+    <!-- MODAL -->
+
+
+
+    <div id="myModal"
+
+    class="w3-modal">
+
+
+
+        <div class="w3-modal-content">
+
+
+
+            <span
+
+            class="close"
+
+            onclick="closeModal()">
+
+
+
+            &times;
+
+
+            </span>
+
+
+
+
+            <h2>
+
+                Welcome Traveller ✈️
+
+            </h2>
+
+
+            <p>
+
+                Your next adventure starts here.
+
+            </p>
+
+
+        </div>
+
+
+
+    </div>
+
+
+
+
+
+
+
+<script>
+
+
+
+function openModal(){
+
+document.getElementById("myModal").style.display="block";
+
+}
+
+
+
+function closeModal(){
+
+document.getElementById("myModal").style.display="none";
+
+}
+
+
+
+
+function getLocation(){
+
+
+if(navigator.geolocation){
+
+navigator.geolocation.getCurrentPosition(showPosition);
+
+}
+
+}
+
+
+
+function showPosition(position){
+
+
+document.getElementById("location").innerHTML=
+
+"Latitude : "
+
++position.coords.latitude+
+
+"<br>Longitude : "
+
++position.coords.longitude;
+
+}
+
+
+
+
+function saveName(){
+
+
+let name=document.getElementById("username").value;
+
+
+localStorage.setItem("username",name);
+
+
+alert("Saved Successfully");
+
+
+}
+
+
+
+
+function allowDrop(ev){
+
+ev.preventDefault();
+
+}
+
+
+
+function drag(ev){
+
+ev.dataTransfer.setData("text",ev.target.id);
+
+}
+
+
+
+function drop(ev){
+
+
+ev.preventDefault();
+
+
+var data=
+
+ev.dataTransfer.getData("text");
+
+
+ev.target.appendChild(
+
+document.getElementById(data)
+
+);
+
+
+}
+
+
+</script>
+
+
+
+
+</body>
+
+</html>
