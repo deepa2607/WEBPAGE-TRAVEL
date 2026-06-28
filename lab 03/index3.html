@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Travel Explorer</title>
+<link rel="stylesheet" href="style3.css">
+</head>
+<body>
+
+<!-- HEADER -->
+<header>
+  <div class="hdr">
+    <a href="#home" class="logo">
+      <div class="logo-ic">✈️</div>
+      <div><b>Travel Explorer</b><small>Discover the world</small></div>
+    </a>
+    <nav id="desknav">
+      <a href="#home" class="nav-link on">Home</a>
+      <a href="#destinations" class="nav-link">Destinations</a>
+      <a href="#packages" class="nav-link">Packages</a>
+      <a href="#register" class="nav-link nav-cta">✈️ Register Now</a>
+    </nav>
+    <button class="ham" id="ham" aria-label="Menu" onclick="toggleMenu()">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+  <div class="mob-nav" id="mobnav">
+    <a href="#home" class="mob-link on" onclick="closeMenu()">🏠 Home</a>
+    <a href="#destinations" class="mob-link" onclick="closeMenu()">🗺️ Destinations</a>
+    <a href="#packages" class="mob-link" onclick="closeMenu()">📦 Packages</a>
+    <a href="#register" class="mob-link" onclick="closeMenu()">✈️ Register Now</a>
+  </div>
+</header>
+
+<!-- HERO -->
+<div id="home">
+<section class="hero">
+  <img id="heroImg" src="https://images.unsplash.com/photo-1469474968028-56623f02e42e?w=1400&q=80" alt="Travel"/>
+  <div class="hero-ov"></div>
+  <div class="hero-txt">
+    <div class="hero-tag">✨ World's #1 Travel Platform</div>
+    <h1>Explore the World<br/>Like Never <span>Before</span></h1>
+    <p>Handpicked destinations · Unbeatable packages · Memories that last forever</p>
+    <div class="hero-btns">
+      <a href="#register" class="hbtn hbtn-p">✈️ Register Now</a>
+      <a href="#destinations" class="hbtn hbtn-s">🗺️ View Destinations</a>
+    </div>
+  </div>
+  <div class="dots" id="dots"></div>
+  <div class="scroll-ind"><span>Scroll</span><div class="scroll-arrow"></div></div>
+</section>
+</div>
+
+<!-- STATS -->
+<div class="stats">
+  <div class="stats-inner">
+    <div class="stat"><b>50K+</b><small>Happy Travelers</small></div>
+    <div class="stat"><b>120+</b><small>Destinations</small></div>
+    <div class="stat"><b>15+</b><small>Years Experience</small></div>
+    <div class="stat"><b>4.9★</b><small>Average Rating</small></div>
+  </div>
+</div>
+
+<!-- DESTINATIONS -->
+<section id="destinations">
+  <div class="sec-max">
+    <div class="sec-head">
+      <h2>Popular Destinations</h2>
+      <p>Explore our most loved travel spots around the globe</p>
+      <div class="line"></div>
+    </div>
+    <div class="dest-grid">
+      <div class="dcard"><img src="https://images.unsplash.com/photo-1502602898657-3e91760cbb34?w=500&q=80" alt="Paris"/><div class="dl"><b>🇫🇷 Paris, France</b><small>City of Love</small></div></div>
+      <div class="dcard"><img src="https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=500&q=80" alt="Tokyo"/><div class="dl"><b>🇯🇵 Tokyo, Japan</b><small>Future meets tradition</small></div><div class="badge">Hot</div></div>
+      <div class="dcard"><img src="https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=500&q=80" alt="Rajasthan"/><div class="dl"><b>🇮🇳 Rajasthan, India</b><small>Royal heritage</small></div></div>
+      <div class="dcard"><img src="https://images.unsplash.com/photo-1506973035872-a4ec16b8e8d9?w=500&q=80" alt="Sydney"/><div class="dl"><b>🇦🇺 Sydney, Australia</b><small>Iconic harbour</small></div></div>
+      <div class="dcard"><img src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=500&q=80" alt="Dubai"/><div class="dl"><b>🇦🇪 Dubai, UAE</b><small>Luxury redefined</small></div><div class="badge">New</div></div>
+      <div class="dcard"><img src="https://images.unsplash.com/photo-1501854140801-50d01698950b?w=500&q=80" alt="Maldives"/><div class="dl"><b>🇲🇻 Maldives</b><small>Paradise islands</small></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- PACKAGES -->
+<section id="packages">
+  <div class="sec-max">
+    <div class="sec-head">
+      <h2>Featured Packages</h2>
+      <p>All-inclusive deals handcrafted for every type of traveler</p>
+      <div class="line"></div>
+    </div>
+    <div class="pkg-grid">
+      <div class="pcard">
+        <img src="https://images.unsplash.com/photo-1503917988258-f87a78e3c995?w=600&q=80" alt="Europe"/>
+        <div class="pcard-body">
+          <h3>European Grand Tour</h3>
+          <p>Paris · Rome · Barcelona · Amsterdam · 14 nights all-inclusive luxury trip</p>
+          <div class="pcard-meta">
+            <div class="price">₹1,85,000 <small>/person</small></div>
+            <button class="pkg-btn" onclick="pickPackage('European Grand Tour','₹1,85,000')">Book Now</button>
+          </div>
+        </div>
+      </div>
+      <div class="pcard">
+        <img src="https://images.unsplash.com/photo-1537953773345-d172ccf13cf1?w=600&q=80" alt="Bali"/>
+        <div class="pcard-body">
+          <h3>Bali Bliss Escape</h3>
+          <p>7 nights in Ubud & Seminyak · Spa · Temples · Private villa stay included</p>
+          <div class="pcard-meta">
+            <div class="price">₹75,000 <small>/person</small></div>
+            <button class="pkg-btn" onclick="pickPackage('Bali Bliss Escape','₹75,000')">Book Now</button>
+          </div>
+        </div>
+      </div>
+      <div class="pcard">
+        <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=600&q=80" alt="Himalaya"/>
+        <div class="pcard-body">
+          <h3>Himalayan Adventure</h3>
+          <p>Trekking · Camping · Manali to Leh road trip · 10 days thrill experience</p>
+          <div class="pcard-meta">
+            <div class="price">₹45,000 <small>/person</small></div>
+            <button class="pkg-btn" onclick="pickPackage('Himalayan Adventure','₹45,000')">Book Now</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- REGISTER -->
+<section id="register">
+  <div class="reg-wrap">
+    <div>
+      <h2 class="stitle">🧳 Traveler Registration</h2>
+      <div class="fcard">
+      <form id="regForm" novalidate>
+        <fieldset>
+          <legend>Personal Information</legend>
+          <div class="f"><label>Full Name <span class="req">*</span></label><input type="text" id="fullName" placeholder="e.g. Priya Sharma"/><div class="em" id="e-fullName">Name is required.</div></div>
+          <div class="f"><label>Email Address <span class="req">*</span></label><input type="email" id="email" placeholder="name@example.com"/><div class="em" id="e-email">Enter a valid email.</div></div>
+          <div class="f"><label>Password <span class="req">*</span></label><input type="password" id="password" placeholder="Min. 8 characters"/><div class="em" id="e-password">Minimum 8 characters required.</div></div>
+          <div class="f"><label>Confirm Password <span class="req">*</span></label><input type="password" id="confirmPwd" placeholder="Re-enter password"/><div class="em" id="e-confirmPwd">Passwords do not match.</div></div>
+          <div class="f"><label>Phone Number <span class="req">*</span></label><input type="number" id="phone" placeholder="10-digit number"/><div class="em" id="e-phone">Enter a valid 10-digit number.</div></div>
+          <div class="f">
+            <label>Gender <span class="req">*</span></label>
+            <div class="pg">
+              <label><input type="radio" name="gender" value="Male"/> Male</label>
+              <label><input type="radio" name="gender" value="Female"/> Female</label>
+              <label><input type="radio" name="gender" value="Non-binary"/> Non-binary</label>
+              <label><input type="radio" name="gender" value="Prefer not to say"/> Prefer not to say</label>
+            </div>
+            <div class="em" id="e-gender">Please select your gender.</div>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>Travel Details</legend>
+          <div class="f"><label>Travel Date <span class="req">*</span></label><input type="date" id="travelDate"/><div class="em" id="e-travelDate">Please pick a date.</div></div>
+          <div class="f">
+            <label>Destination <span class="req">*</span></label>
+            <select id="destination">
+              <option value="">— Choose a destination —</option>
+              <option>🇮🇳 Rajasthan, India</option><option>🇫🇷 Paris, France</option>
+              <option>🇯🇵 Tokyo, Japan</option><option>🇧🇷 Rio de Janeiro, Brazil</option>
+              <option>🇿🇦 Cape Town, South Africa</option><option>🇦🇺 Sydney, Australia</option>
+              <option>🇺🇸 New York, USA</option><option>🇮🇹 Rome, Italy</option>
+              <option>🇲🇻 Maldives</option><option>🇦🇪 Dubai, UAE</option>
+            </select>
+            <div class="em" id="e-destination">Please select a destination.</div>
+          </div>
+          <div class="f"><label>Number of Travelers</label><input type="number" id="travelers" min="1" max="50" value="1"/></div>
+          <div class="f">
+            <label>Travel Interests</label>
+            <div class="cg">
+              <label><input type="checkbox" name="interests" value="Adventure"/> 🏔️ Adventure</label>
+              <label><input type="checkbox" name="interests" value="Beach"/> 🏖️ Beach</label>
+              <label><input type="checkbox" name="interests" value="Culture"/> 🏛️ Culture</label>
+              <label><input type="checkbox" name="interests" value="Wildlife"/> 🦁 Wildlife</label>
+              <label><input type="checkbox" name="interests" value="Food"/> 🍜 Food</label>
+              <label><input type="checkbox" name="interests" value="History"/> 🏰 History</label>
+              <label><input type="checkbox" name="interests" value="Shopping"/> 🛍️ Shopping</label>
+              <label><input type="checkbox" name="interests" value="Wellness"/> 🧘 Wellness</label>
+            </div>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>Preferences</legend>
+          <div class="f">
+            <label>Budget (₹)</label>
+            <div class="rw"><input type="range" id="budget" min="10000" max="500000" step="5000" value="75000"/><span class="rv" id="bv">₹75,000</span></div>
+          </div>
+          <div class="f"><label>Favorite Theme Color</label><input type="color" id="themeColor" value="#0ea5a0"/></div>
+          <div class="f"><label>Preferred Contact Time</label><input type="time" id="contactTime" value="10:00"/></div>
+          <div class="f"><label>Special Requests</label><textarea id="specialReq" placeholder="Dietary needs, accessibility, special occasions…"></textarea></div>
+        </fieldset>
+
+        <fieldset>
+          <legend>Identity Document</legend>
+          <div class="f">
+            <div class="fw" onclick="document.getElementById('passport').click()">
+              <input type="file" id="passport" accept=".pdf,.jpg,.jpeg,.png"/>
+              <label class="fl"><span class="ic">📄</span><span>Click to upload Passport / National ID</span><small>PDF, JPG or PNG · max 5 MB</small></label>
+              <div id="fn"></div>
+            </div>
+            <div class="em" id="e-passport">Please upload an identity document.</div>
+          </div>
+        </fieldset>
+
+        <div class="tr-row">
+          <input type="checkbox" id="terms"/>
+          <label for="terms">I agree to the <a href="#" style="color:var(--t)">Terms & Conditions</a> and <a href="#" style="color:var(--t)">Privacy Policy</a> <span class="req">*</span></label>
+        </div>
+        <div class="em" id="e-terms">You must accept the terms to continue.</div>
+
+        <div class="br">
+          <button type="button" class="btn bp" onclick="registerUser()">✈️ Register</button>
+          <button type="reset" class="btn bs" onclick="resetAll()">↺ Reset</button>
+        </div>
+      </form>
+      </div>
+    </div>
+
+    <!-- TRAVELER CARD -->
+    <div id="cs">
+      <h2 class="stitle">🎫 Registered Traveler</h2>
+      <article class="tc">
+        <div class="ch">
+          <div class="av" id="cav">?</div>
+          <h2 id="cname">—</h2><p id="cemail">—</p>
+          <div class="badge2">✅ Verified Traveler</div>
+        </div>
+        <div class="cb">
+          <div class="cg2">
+            <div class="ci"><div class="lbl">📱 Phone</div><div class="val" id="cphone">—</div></div>
+            <div class="ci"><div class="lbl">📍 Destination</div><div class="val" id="cdest">—</div></div>
+            <div class="ci"><div class="lbl">📅 Travel Date</div><div class="val" id="cdate">—</div></div>
+            <div class="ci"><div class="lbl">👥 Travelers</div><div class="val" id="ctrav">—</div></div>
+            <div class="ci"><div class="lbl">🚻 Gender</div><div class="val" id="cgender">—</div></div>
+            <div class="ci"><div class="lbl">💰 Budget</div><div class="val" id="cbudget">—</div></div>
+            <div class="ci full"><div class="lbl">🎯 Interests</div><div class="val" id="cint">—</div></div>
+            <div class="ci"><div class="lbl">🎨 Theme Color</div><div class="val" id="ctheme">—</div></div>
+            <div class="ci"><div class="lbl">🕒 Contact Time</div><div class="val" id="ctime">—</div></div>
+            <div class="ci full"><div class="lbl">💬 Special Requests</div><div class="val" id="creq">—</div></div>
+            <div class="ci full"><div class="lbl">📄 Uploaded File</div><div class="val" id="cfile">—</div></div>
+          </div>
+        </div>
+        <div class="cf">✅ Saved to local storage · Persists on page reload</div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer id="footer">
+  <div class="footer-inner">
+    <div class="footer-logo">
+      <b>✈️ Travel Explorer</b>
+      <p>We help you discover the world's most beautiful destinations with handcrafted packages and personalised experiences.</p>
+      <div class="social">
+        <a href="#">📘</a><a href="#">📸</a><a href="#">🐦</a><a href="#">▶️</a>
+      </div>
+    </div>
+    <div class="footer-col">
+      <h4>Quick Links</h4>
+      <a href="#home">Home</a><a href="#destinations">Destinations</a>
+      <a href="#packages">Packages</a><a href="#register">Register</a>
+    </div>
+    <div class="footer-col">
+      <h4>Destinations</h4>
+      <a href="#">Paris, France</a><a href="#">Tokyo, Japan</a>
+      <a href="#">Maldives</a><a href="#">Dubai, UAE</a>
+    </div>
+    <div class="footer-col">
+      <h4>Contact</h4>
+      <a href="#">📧 hello@travelexplorer.com</a>
+      <a href="#">📞 +91 98765 43210</a>
+      <a href="#">📍 Bengaluru, India</a>
+    </div>
+  </div>
+  <div class="footer-bottom">© 2026 Travel Explorer · All Rights Reserved · Made with ❤️</div>
+</footer>
+
+<div id="toast">✅ Registered successfully!</div>
+
+<script>
+// Hero slideshow
+const slides = [
+  'https://images.unsplash.com/photo-1469474968028-56623f02e42e?w=1400&q=80',
+  'https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?w=1400&q=80',
+  'https://images.unsplash.com/photo-1488085061387-422e29b40080?w=1400&q=80',
+];
+let cur = 0;
+const heroImg = document.getElementById('heroImg');
+const dotsEl  = document.getElementById('dots');
+slides.forEach((_,i) => {
+  const d = document.createElement('div');
+  d.className = 'dot' + (i===0?' on':'');
+  d.onclick = () => goSlide(i);
+  dotsEl.appendChild(d);
+});
+const goSlide = i => {
+  cur = i;
+  heroImg.style.opacity = 0;
+  setTimeout(() => { heroImg.src = slides[i]; heroImg.style.opacity = 1; }, 400);
+  document.querySelectorAll('.dot').forEach((d,j) => d.classList.toggle('on', j===i));
+};
+setInterval(() => goSlide((cur+1) % slides.length), 5000);
+
+// Active nav on scroll
+const sections = ['home','destinations','packages','register'];
+window.addEventListener('scroll', () => {
+  const y = window.scrollY + 80;
+  let active = 'home';
+  sections.forEach(id => { const el = document.getElementById(id); if(el && el.offsetTop <= y) active = id; });
+  document.querySelectorAll('.nav-link,.mob-link').forEach(a => a.classList.toggle('on', a.getAttribute('href')==='#'+active));
+}, {passive:true});
+
+// Hamburger
+const toggleMenu = () => { document.getElementById('ham').classList.toggle('open'); document.getElementById('mobnav').classList.toggle('open'); };
+const closeMenu  = () => { document.getElementById('ham').classList.remove('open'); document.getElementById('mobnav').classList.remove('open'); };
+
+// Package → auto-fill
+const pickPackage = (name, price) => {
+  document.getElementById('register').scrollIntoView({behavior:'smooth'});
+  setTimeout(() => { document.getElementById('specialReq').value = `Interested in: ${name} (${price})`; }, 600);
+};
+
+// Budget slider
+document.getElementById('budget').oninput = () => {
+  document.getElementById('bv').textContent = '₹' + parseInt(document.getElementById('budget').value).toLocaleString('en-IN');
+};
+
+// File input
+document.getElementById('passport').onchange = e => {
+  const f = e.target.files[0];
+  document.getElementById('fn').textContent = f ? '📎 ' + f.name : '';
+  if(f) setE('passport', false);
+};
+
+// Validation helpers
+const setE = (id, bad) => {
+  document.getElementById('e-'+id)?.classList.toggle('on', bad);
+  (document.getElementById(id) || document.querySelector(`[name="${id}"]`))?.classList.toggle('er', bad);
+};
+
+// Reset
+const resetAll = () => {
+  ['fullName','email','password','confirmPwd','phone','travelDate','destination','gender','passport','terms'].forEach(id => setE(id,false));
+  document.getElementById('bv').textContent = '₹75,000';
+  document.getElementById('fn').textContent = '';
+  document.getElementById('cs').style.display = 'none';
+};
+
+// REGISTER — arrow function
+const registerUser = () => {
+  const g    = id => document.getElementById(id);
+  const name = g('fullName').value.trim(), email = g('email').value.trim();
+  const pwd  = g('password').value,        cpwd  = g('confirmPwd').value;
+  const phone= g('phone').value.trim(),    date  = g('travelDate').value;
+  const dest = g('destination').value,     trav  = g('travelers').value;
+  const budget=g('budget').value,          theme = g('themeColor').value;
+  const ctime= g('contactTime').value,     sreq  = g('specialReq').value.trim();
+  const file = g('passport').files[0];
+  const gender=(document.querySelector('input[name="gender"]:checked')||{}).value||'';
+  const ints =[...document.querySelectorAll('input[name="interests"]:checked')].map(c=>c.value).join(', ');
+
+  let ok = true;
+  const v = (id, cond) => { setE(id,!cond); if(!cond) ok=false; };
+  v('fullName',   name.length > 0);
+  v('email',      /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email));
+  v('password',   pwd.length >= 8);
+  v('confirmPwd', pwd===cpwd && cpwd.length>0);
+  v('phone',      /^\d{10}$/.test(phone));
+  v('travelDate', date!=='');
+  v('destination',dest!=='');
+  v('gender',     gender!=='');
+  v('passport',   !!file);
+  v('terms',      g('terms').checked);
+  if(!ok){ document.querySelector('.em.on')?.scrollIntoView({behavior:'smooth',block:'center'}); return; }
+
+  const data = {name,email,phone,date,dest,trav,gender,ints,budget,theme,ctime,sreq,fileName:file.name};
+  localStorage.setItem('traveler', JSON.stringify(data));
+  showCard(data);
+
+  const t = g('toast'); t.classList.add('on');
+  setTimeout(() => t.classList.remove('on'), 3000);
+};
+
+// Show card — arrow function
+const showCard = d => {
+  const g = id => document.getElementById(id);
+  g('cav').textContent    = d.name.split(' ').map(w=>w[0]).join('').slice(0,2).toUpperCase()||'?';
+  g('cname').textContent  = d.name;
+  g('cemail').textContent = d.email;
+  g('cphone').textContent = d.phone;
+  g('cdest').textContent  = d.dest;
+  g('cdate').textContent  = d.date ? new Date(d.date+'T00:00:00').toLocaleDateString('en-IN',{day:'numeric',month:'long',year:'numeric'}) : '—';
+  g('ctrav').textContent  = d.trav+' person(s)';
+  g('cgender').textContent= d.gender;
+  g('cbudget').textContent= '₹'+parseInt(d.budget).toLocaleString('en-IN');
+  g('cint').textContent   = d.ints||'None selected';
+  g('ctheme').innerHTML   = `<span class="sw" style="background:${d.theme}"></span>${d.theme}`;
+  g('ctime').textContent  = d.ctime||'—';
+  g('creq').textContent   = d.sreq||'None';
+  g('cfile').textContent  = d.fileName;
+  const cs = g('cs'); cs.style.display='block';
+  setTimeout(() => cs.scrollIntoView({behavior:'smooth',block:'start'}), 100);
+};
+
+// Load saved on page load
+window.addEventListener('DOMContentLoaded', () => {
+  try { const d=JSON.parse(localStorage.getItem('traveler')); if(d) showCard(d); } catch{}
+});
+</script>
+</body>
+</html>
